@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ArXiv Frontend Trends</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700&family=Lora:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Default Theme: Slate */
+      :root {
+        --color-primary: #0f172a; /* slate-900 */
+        --color-secondary: #1e293b; /* slate-800 */
+        --color-tertiary: #334155; /* slate-700 */
+        --color-accent: #38bdf8; /* sky-400 */
+        --color-accent-hover: #0ea5e9; /* sky-500 */
+        --color-accent-2: #22d3ee; /* cyan-400 */
+        --color-accent-3: #2dd4bf; /* teal-400 */
+        --color-text-base: #e2e8f0; /* slate-200 */
+        --color-text-muted: #94a3b8; /* slate-400 */
+        --color-text-inverted: #0f172a;
+        --color-border-color: #334155; /* slate-700 */
+        --color-danger-bg: rgba(159, 18, 57, 0.5); /* rose-500/50 */
+        --color-danger-border: #be123c; /* rose-700 */
+        --color-danger-text: #fda4af; /* rose-300 */
+        --font-sans: 'Inter', sans-serif;
+        --font-serif: 'Lora', serif;
+        --font-mono: 'Roboto Mono', monospace;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'primary': 'var(--color-primary)',
+              'secondary': 'var(--color-secondary)',
+              'tertiary': 'var(--color-tertiary)',
+              'accent': 'var(--color-accent)',
+              'accent-hover': 'var(--color-accent-hover)',
+              'accent-2': 'var(--color-accent-2)',
+              'accent-3': 'var(--color-accent-3)',
+              'text-base': 'var(--color-text-base)',
+              'text-muted': 'var(--color-text-muted)',
+              'text-inverted': 'var(--color-text-inverted)',
+              'border-color': 'var(--color-border-color)',
+              'danger-bg': 'var(--color-danger-bg)',
+              'danger-border': 'var(--color-danger-border)',
+              'danger-text': 'var(--color-danger-text)',
+            },
+            fontFamily: {
+              sans: ['var(--font-sans)', 'sans-serif'],
+              serif: ['var(--font-serif)', 'serif'],
+              mono: ['var(--font-mono)', 'monospace'],
+            },
+            animation: {
+                'fade-in': 'fadeIn 0.5s ease-in-out',
+                'slide-in-up': 'slideInUp 0.5s ease-in-out',
+            },
+            keyframes: {
+                fadeIn: {
+                    '0%': { opacity: 0 },
+                    '100%': { opacity: 1 },
+                },
+                slideInUp: {
+                    '0%': { transform: 'translateY(20px)', opacity: 0 },
+                    '100%': { transform: 'translateY(0)', opacity: 1 },
+                }
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.25.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-primary font-sans">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
