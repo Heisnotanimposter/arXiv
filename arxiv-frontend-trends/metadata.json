@@ -1,0 +1,5 @@
+{
+  "name": "ArXiv Frontend Trends",
+  "description": "A sleek, real-time dashboard to discover the latest and most popular arXiv articles on HTML, CSS, and JavaScript, helping frontend developers stay on the cutting edge.",
+  "requestFramePermissions": []
+}
